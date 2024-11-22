@@ -2,12 +2,15 @@ const express = require('express');
 const connectDB = require('../database/db.cjs');
 const userRoutes = require('../routes/userRoute.cjs');
 var cors = require('cors')
+const bodyParser = require('body-parser'); 
 require('dotenv').config();
 
 PORT=3000;
 
 const app = express();
 app.use(cors())
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true })); 
 
 // Connect to the database
 connectDB();
