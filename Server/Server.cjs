@@ -5,9 +5,7 @@ const projectRoutes = require('../routes/projectRoutes.cjs');
 var cors = require('cors')
 const bodyParser = require('body-parser'); 
 require('dotenv').config();
-
-PORT=3000;
-
+const PORT = process.env.PORT;
 const app = express();
 app.use(cors())
 app.use(bodyParser.json());
