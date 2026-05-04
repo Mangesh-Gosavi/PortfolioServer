@@ -1,6 +1,6 @@
 const express = require('express');
 const connectDB = require('../database/db.cjs');
-const userRoutes = require('../routes/userRoute.cjs');
+const emailRoutes = require('../routes/emailRoute.cjs');
 const projectRoutes = require('../routes/projectRoutes.cjs');
 var cors = require('cors')
 const bodyParser = require('body-parser'); 
@@ -22,7 +22,7 @@ app.set('view engine', 'cjs');
 app.set('views', './views');
 
 // Routes
-app.use('/', userRoutes);
+app.use('/', emailRoutes);
 app.use('/projects', projectRoutes);
 
 // Start the server
